@@ -1,0 +1,12 @@
+
+/* 
+    Created on : 29.10.2017, 15:27:10
+    Author     : Bekzodjon
+*/
+
+.root{
+    -fx-background-image: url(content.png);
+    -fx-background-repeat: no-repeat;
+}
+
+
