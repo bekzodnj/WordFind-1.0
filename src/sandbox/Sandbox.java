@@ -3,8 +3,7 @@
  * Ingliz tilida so`z o`yini
  * Ushbu dastur kiritilgan
  * so`z ohirgi harfiga so`z topadi 
- * Dasturdan so`z o`yini va so`zlar bazasidan
- * so`zlarni o`rganish maqsadida foydalanish mumkin.
+ *
  ***
  ** Bekzodjon Norkuziev
  *  Author
