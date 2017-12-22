@@ -412,7 +412,7 @@ public class Sandbox extends Application {
         word.setScaleY(3);
         
         score+=my_word.length();
-        score_t.setText("Ochko: " + score);
+        score_t.setText("Score: " + score);
         
         PathTransition pt = new PathTransition(Duration.millis(800), new Line(150, 378, 150, 214), word);
         pt.setCycleCount(1);
