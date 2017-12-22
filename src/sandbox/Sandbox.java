@@ -1,9 +1,8 @@
 /*
  * (c) Word Find 1.0
- * Ingliz tilida so`z o`yini
- * Ushbu dastur kiritilgan
- * so`z ohirgi harfiga so`z topadi 
- *
+ * Word Game in English
+ * Program plays with you
+ * Word Game (Word for last character)
  ***
  ** Bekzodjon Norkuziev
  *  Author
@@ -109,7 +108,7 @@ public class Sandbox extends Application {
         
     
         
-   Text score_t = new Text(60, 460, "Ochko: " +  score);
+   Text score_t = new Text(60, 460, "Score: " +  score);
    score_t.setScaleX(1.5);
    score_t.setScaleY(1.5);
    score_t.setFill(Color.DARKCYAN);
@@ -120,11 +119,11 @@ public class Sandbox extends Application {
    pane.getChildren().add(textf);
    textf.setTranslateX(241);
    textf.setTranslateY(386);
-   textf.setTooltip(new Tooltip("Ushbu so`z ohirgi harfiga mos so`z kiriting"));
+   textf.setTooltip(new Tooltip("Please enter a word for last letter: "));
    
    
-   final Text head = new Text(245, 55, "Berilgan so`zning ohirgi "
-                + "\nharfiga mos so`z kiriting");
+   final Text head = new Text(245, 55, "Find a word "
+                + "\nfor given word`s last letter");
     pane.getChildren().add(head);
     head.setScaleX(1.5);
     head.setFill(Color.ALICEBLUE);
@@ -160,7 +159,7 @@ public class Sandbox extends Application {
     pane.getChildren().add(congrats);
     congrats.setFont(new Font(15));
     
-    final String[] congrats_list = {"Qoyil", "Barakalla", "Zo`r", "To`g`ri", "Juda\nyaxshi"};
+    final String[] congrats_list = {"Nice", "Excellent", "Awesome", "Correct", "Good Job"};
     
     
     // Logo hint
@@ -168,14 +167,13 @@ public class Sandbox extends Application {
         img.setScaleX(1.2);
         img.setScaleY(1.2);
         
-        head.setText("Ingliz tilida so`z o`yini");
+        head.setText("Word Game in English");
     });
     img.setOnMouseExited(e->{
         img.setScaleX(1);
         img.setScaleY(1);
         
-        head.setText("Berilgan so`zning ohirgi "
-                + "\nharfiga mos so`z kiriting");
+       
     });
     
        
@@ -414,7 +412,7 @@ public class Sandbox extends Application {
         word.setScaleY(3);
         
         score+=my_word.length();
-        score_t.setText("Ochko: " + score);
+        score_t.setText("Score: " + score);
         
         PathTransition pt = new PathTransition(Duration.millis(800), new Line(150, 378, 150, 214), word);
         pt.setCycleCount(1);
@@ -655,7 +653,7 @@ public class Sandbox extends Application {
         
         
         }else{
-          word.setText("Ohirgi harfiga mos so`z toping");
+          word.setText("Find word for last letter ");
           textf.clear();
         word.setScaleX(1.5);
         word.setScaleY(1.5);
@@ -673,7 +671,7 @@ public class Sandbox extends Application {
         }
         //if ends
         }else if(used_words.contains(my_word)){
-        word.setText("\t  Bu so`z \n\tfoydalanildi");
+        word.setText("\t  This word \n\tis used");
         textf.clear();
         word.setScaleX(1.5);
         word.setScaleY(1.5);
@@ -690,7 +688,7 @@ public class Sandbox extends Application {
         ft.play();
         }
         else{
-        word.setText("\t Bu so`z bazada \n\t  mavjud emas.\nBoshqa so`z kiritib ko`ring.");
+        word.setText("\tThis word is \n\t unavailable in database.\nPlease, enter another word");
         textf.clear();
         word.setScaleX(1.2);
         word.setScaleY(1.2);
