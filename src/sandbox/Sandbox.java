@@ -69,7 +69,7 @@ import javax.swing.JOptionPane;
 public class Sandbox extends Application {
     
 
-    
+     // counter variables for iterating on each word
      int a = 0;
      int b = 0;
      int c = 0;
