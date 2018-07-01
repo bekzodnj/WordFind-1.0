@@ -67,9 +67,7 @@ import javax.swing.JOptionPane;
 
 
 public class Sandbox extends Application {
-    
-
-     // counter variables for iterating on each word
+      // counter variables for iterating on each word
      int a = 0;
      int b = 0;
      int c = 0;
@@ -96,8 +94,8 @@ public class Sandbox extends Application {
      int x = 0;
      int y = 0;
      int z = 0;
-     
-     int score = 0;
+    //calculating the total score 
+    int score = 0;
      
     @Override
     public void start(Stage primaryStage) {
